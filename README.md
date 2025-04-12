@@ -1,2 +1,3 @@
-# TimestampMicroservice
-Freecodecamp project "TimestampMicroservice"
+# Timestamp Microservice
+
+This is the boilerplate code for the Timestamp Microservice project for freecodecamp certification 
