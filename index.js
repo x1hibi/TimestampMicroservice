@@ -20,7 +20,11 @@ app.get("/", function (req, res) {
 
 
 
-
+/**
+ * Convert a URL parameter into a date object and return as json with date in utc format and date in miliseconds
+ * @param {object} request 
+ * @param {object} response 
+ */
 function getDateApi(request, response) {
   // Get parameters from URL
   let dateString = request.params.date
