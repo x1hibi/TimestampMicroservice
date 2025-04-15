@@ -16,7 +16,6 @@ router.get("/timestamp/api/:date?", timestampController.getDate);
 /* Request header microservice */
 router.get("/request-header/api/whoami", requestHeaderController.getUserHardwareInfo);
 
-
 /* URL shortener microservice */
 router.post('/url-shortener/api/shorturl',shortUrlController.shortUrlHandler);
 router.get('/url-shortener/api/shorturl/:url',shortUrlController.sendToURL)
@@ -30,5 +29,5 @@ router.get('/exercise-tracker/api/users/:_id/logs',exerciseTrackerController.log
 /* File metadata microservice */
 router.post('/file-metadata/api/fileanalyse',fileMetadataController.uploadCallback,fileMetadataController.fileAnalizer)
 
-
+// Export routes
 module.exports = router

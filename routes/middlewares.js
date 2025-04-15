@@ -10,5 +10,5 @@ router.use(cors({ optionsSuccessStatus: 200 }));
 // some legacy browsers choke on 204
 // Set public static media
 router.use(express.static('public'));
-
+// Export route for model
 module.exports = router

@@ -28,5 +28,5 @@ router.get("/exercise-tracker", (request, response) => {
 router.get("/file-metadata", (request, response) => {
     response.sendFile(viewPath+'fileMetadata.html');
 });
-
+// Export module for static views
 module.exports = router
