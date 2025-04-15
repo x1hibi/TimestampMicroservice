@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-
-<html>
-
-   <head>
-      <title>Request Header Parser</title>
-      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
+<html lang="en">
+  <head>
+    <title>Request Header Microservice</title>
+    <link rel="shortcut icon" href="images/x1hibi.ico" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
 
    <body>
-      <div class="container">
-        <h1>Request Header Parser Microservice</h1>
-
-        <h2>Example Usage:</h2>
-        <p>
-          <a href="request-header/api/whoami">[base url]/api/whoami</a>
-        </p>
-
-        <h2>Example Output:</h2>
-        <p>
-          <code>{"ipaddress":"::ffff:159.20.14.100","language":"en-US,en;q=0.5",<br>"software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"}</code>
-        </p>
-      </div>
-      <div class="footer">
-        <p>
-          by <a href="https://www.freecodecamp.org">freeCodeCamp and Luis Raymundo Pérez Alvarado</a>
-        </p>
-      </div>
-   </body>
-
+    <main class="padding-3vw">
+      <button class="back-button">
+        <a href="/">↩</a>
+      </button>
+      <h1 class="fluid-font-title padding-bottom-3vw home-title">Request Header Parser Microservice</h1>
+      <section class="card-description padding-bottom-3vw">
+        <p class="fluid-font-paragraph">Request Header Parser Microservice consists of get information from request header as ip address, lenguage and software.</p>
+      </section><br>
+      <section class="card-description padding-3vw">
+        <h2 class="fluid-font-para padding-top-bottom-1vw home-title"><b>API sintax:</b></h2>
+        <p class="fluid-font-paragraph"><code>[host]/request-header/api/whoami</code></p>
+      </section><br>
+      <section class="card-description padding-3vw">
+        <h2 class="fluid-font-para padding-top-bottom-1vw home-title"><b>Example Usage:</b></h2>
+        <p class="fluid-font-paragraph blue"><a href="request-header/api/whoami">https://microservices-x1hibi.onrender.com/request-header/api/whoami</a></p>
+      </section><br>
+      <section class="card-description padding-3vw">
+        <h2 class="fluid-font-para padding-top-bottom-1vw home-title"><b>Example Output:</b></h2>
+        <p class="fluid-font-paragraph"><code>{"ipaddress":"::ffff:159.20.14.100","language":"en-US,en;q=0.5",<br>"software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"}</code></p>
+      </section><br>
+      <footer class="card-description padding-3vw">
+        <p class="fluid-font-paragraph center-text">Developed by <a class="blue" href="https://x1hibi.github.io/x1hibi/">x1hibi 🐦‍🔥</a></p>
+      </footer>
+    </main>
 
 </html>

@@ -1,0 +1,29 @@
+/******************/
+/* CSS VARIABLES */
+/****************/
+
+:root{
+    
+    /*******************/
+    /*** FONT SIZES ***/
+    /*****************/
+  
+    /* Title font size */
+    --min-big-title-size:40px;
+    --max-big-title-size:120px;
+    --min-title-size:32px;
+    --max-title-size:40px;
+    --min-subtitle-size: 20px;
+    --max-subtitle-size: 30px;
+    --min-paragraph-size: 16px;
+    --max-paragraph-size: 24px;
+    --min-medium-paragraph-size:14px;
+    --max-medium-paragraph-size:20px;
+    --min-small-paragraph-size:10px;
+    --max-small-paragraph-size:px;
+    --min-modal-title-size:23px;
+    --max-modal-title-size:52px;
+    --min-modal-text-size:18px;
+    --max-modal-text-size:30px;
+
+  }

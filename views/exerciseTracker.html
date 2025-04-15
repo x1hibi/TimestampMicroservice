@@ -1,46 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Exercise Tracker | freeCodeCamp</title>
-    <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico"  type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Exercise tracker</title>
+    <link rel="shortcut icon" href="images/x1hibi.ico" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
-    <div class="container">
-      <h1>Exercise tracker</h1>
-      <form action="exercise-tracker/api/users" method="post">
-        <h2>Create a New User</h2>
-        <p><code>POST /api/users</code></p>
-        <input id="uname" type="text" name="username" placeholder="username" />
-        <input type="submit" value="Submit" />
-      </form>
-      <form action="exercise-tracker/api/users/:_id/exercises" id="exercise-form" method="post">
-        <h2>Add exercises</h2>
-        <p><code>POST /api/users/:_id/exercises</code></p>
-        <input id="uid" type="text" name=":_id" placeholder=":_id" />
-        <input id="desc" type="text" name="description" placeholder="description*" />
-        <input id="dur" type="text" name="duration" placeholder="duration* (mins.)" />
-        <input id="date" type="text" name="date" placeholder="date (yyyy-mm-dd)" />
-        <input type="submit" value="Submit" />
-      </form>
-      <p>
-        <strong>GET user's exercise log: </strong>
-        <code>GET /api/users/:_id/logs?[from][&amp;to][&amp;limit]</code>
-      </p>
-      <p><strong>[ ]</strong> = optional</p>
-      <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
-    </div>
-    <script>
-      const exerciseForm = document.getElementById("exercise-form");
-
-      exerciseForm.addEventListener("submit", () => {
-        const userId = document.getElementById("uid").value;
-        exerciseForm.action = `exercise-tracker/api/users/${userId}/exercises`;
-
-        exerciseForm.submit();
-      });
-    </script>
+    <main class="padding-3vw">
+      <button class="back-button">
+        <a href="/">↩</a>
+      </button>
+      <h1 class="fluid-font-title padding-bottom-3vw home-title">Exercise tracker</h1>
+      <section class="card-description padding-bottom-3vw">
+        <p class="fluid-font-paragraph">Exercise tracker microservice consists of create a user in mongo database and be able to assign exercises and see assigned exercises.</p>
+      </section><br>
+      <form action="exercise-tracker/api/users" method="POST" class="card-description flex-column-fixed">
+        <h2 class="fluid-font-paragraph home-title">Insert a new user</h2><br>
+        <section>
+          <label class="fluid-font-paragraph">Username:</label>
+          <input id="uname" class="form-input fluid-font-paragraph" type="text" name="username" placeholder="username" required>
+        </section><br>
+        <button class="blue-button fluid-font-paragraph margin-auto" type="submit" value="Submit">Create user</button>
+      </form><br>
+      <form action="exercise-tracker/api/users/:_id/exercises" class="card-description flex-column-fixed" id="exercise-form" method="post">
+        <h2 class="fluid-font-paragraph home-title">Add exercise</h2><br>
+        <section>
+          <label class="fluid-font-paragraph">user id:</label>
+          <input class="form-input fluid-font-paragraph" id="uid" type="text" name=":_id" placeholder="user id" required />
+        </section><br>
+        <section>
+          <label class="fluid-font-paragraph">Description:</label>
+          <input class="form-input fluid-font-paragraph" id="desc" type="text" name="description" placeholder="description*" required />
+        </section><br>
+        <section>
+          <label class="fluid-font-paragraph">Duration:</label>
+          <input class="form-input fluid-font-paragraph" id="dur" type="text" name="duration" placeholder="duration* (mins.)" required />
+        </section><br>
+        <section>
+          <label class="fluid-font-paragraph">Date:</label>
+          <input class="form-input fluid-font-paragraph" id="date" type="text" name="date" placeholder="date (yyyy-mm-dd)" />
+        </section><br>
+        <button class="blue-button fluid-font-paragraph margin-auto" type="submit" value="Submit">Create exercise</button>
+      </form><br>
+      <section class="card-description padding-3vw">
+        <h2 class="fluid-font-para padding-top-bottom-1vw home-title"><b>API endpoints:</b></h2>
+        <p class="fluid-font-paragraph"><code>
+          <a href="exercise-tracker/api/users/" class="blue">GET [host]/exercise-tracker/api/users</a>
+        </code></p>
+        <p class="fluid-font-paragraph">Return a list of user in database.</p>
+      </section>
+      <section class="card-description padding-3vw">
+        <p class="fluid-font-paragraph"><code>
+          GET [host]/exercise-tracker/api/users/<span class="blue">:_id</span>/logs?[<span class="blue">from</span>][&amp;<span class="blue">to</span>][&amp;<span class="blue">limit</span>]
+        </code></p>
+        <p class="fluid-font-paragraph">Return a list of logs with exercise from user.</p>
+        <p class="fluid-font-paragraph"><span class="blue">:_id</span> is the user id (<b>required</b>)</p>
+        <p class="fluid-font-paragraph">[] are optional parameters to filter user logs using query parameters.</p>
+        <p class="fluid-font-paragraph"><span class="blue">from</span> and <span class="blue">to</span> are in yyyy-mm-dd date format and <span class="blue">limit</span> is a Int.</p>
+      </section><br>
+      <section class="card-description padding-3vw">
+        <h2 class="fluid-font-para padding-top-bottom-1vw home-title"><b>Example usage:</b></h2>
+        <p class="fluid-font-paragraph"><code>
+          <a href="exercise-tracker/api/users/67fe7de1a5b38523dc5dda34/logs" class="blue">GET [host]/exercise-tracker/api/users/67fe7de1a5b38523dc5dda34/logs</a>
+        </code></p>
+        <p class="fluid-font-paragraph">Return a list with all logs.</p>
+        <p class="fluid-font-paragraph"><code>
+          <a href="exercise-tracker/api/users/67fe7de1a5b38523dc5dda34/logs?from=2025-04-12&to=2025-04-13&limit=2" class="blue">GET [host]/exercise-tracker/api/users/67fe7de1a5b38523dc5dda34/logs?from=2025-04-12&to=2025-04-13&limit=2</a>
+        </code></p>
+        <p class="fluid-font-paragraph">Return a list of logs with 2 exercise from user created between 2025-04-12 and 2025-04-13.</p>
+      </section><br>
+      <footer class="card-description padding-3vw">
+        <p class="fluid-font-paragraph center-text">Developed by <a class="blue" href="https://x1hibi.github.io/x1hibi/">x1hibi 🐦‍🔥</a></p>
+      </footer>
   </body>
+ 
+  <script>
+    const exerciseForm = document.getElementById("exercise-form");
+
+    exerciseForm.addEventListener("submit", () => {
+      const userId = document.getElementById("uid").value;
+      exerciseForm.action = `exercise-tracker/api/users/${userId}/exercises`;
+
+      exerciseForm.submit();
+    });
+  </script>
 </html>

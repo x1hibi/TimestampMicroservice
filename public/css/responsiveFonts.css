@@ -1,0 +1,114 @@
+/********************/
+/* Responsive text */
+/******************/
+
+/* sintax  linear responsive text [min font size + (max font size - min font size) * ((viewport width - min viewport width) / (max viewport width - min viewport width))] */
+
+.fluid-font-big-title{
+    font-size: var(--min-big-title-size);
+  }
+  
+  .fluid-font-title{
+    font-size: var(--min-title-size);
+  }
+  
+  .fluid-font-subtitle{
+    font-size: var(--min-subtitle-size);
+  }
+  
+  .fluid-font-paragraph{
+    font-size: var(--min-paragraph-size);
+  }
+  
+  .fluid-font-medium-paragraph{
+    font-size: var(--min-medium-paragraph-size);
+  }
+  
+  .fluid-font-small-paragraph{
+    font-size:var(--min-small-paragraph-size);
+  }
+  
+  .fluid-font-modal-title {
+    font-size: var(--min-modal-title-size);
+  }
+  
+  .fluid-font-modal-text{
+    font-size: var(--min-modal-text-size);
+  }
+  
+  
+  /* sintax  linear responsive text [min font size + (max font size - min font size) * ((viewport width - min viewport width) / (max viewport width - min viewport width))] */
+  /* Scren with a width equal or bigger than 320px  */
+  @media screen and (min-width: 320px) {
+    
+    .fluid-font-big-title{
+      font-size: calc(var(--min-big-title-size) + 80 * ((100vw - 320px) / 1600)) ;
+    }
+  
+    .fluid-font-title{
+        font-size: calc(var(--min-title-size) + 8 * ((100vw - 320px) / 1600)) ;
+    }
+  
+    .fluid-font-subtitle{
+        font-size: calc(var(--min-subtitle-size) + 10 * ((100vw - 320px) / 1600)) ;
+    }
+  
+    .fluid-font-paragraph{
+      font-size: calc(var(--min-paragraph-size) + 8 * ((100vw - 320px) / 1600)) ;
+    }
+  
+    .fluid-font-medium-paragraph{
+      font-size: calc(var(--min-medium-paragraph-size) + 6 * ((100vw - 320px) / 1600)) ;
+    }
+  
+    .fluid-font-small-paragraph{
+      font-size: calc(var(--min-small-paragraph-size) + 5 * ((100vw - 320px) / 1600)) ;
+    }
+  
+    .fluid-font-modal-title {
+      font-size: calc(var(--min-modal-title-size) + 29 * ((100vw - 320px) / 1600));
+    }
+  
+    .fluid-font-modal-text{
+      font-size: calc(var(--min-modal-text-size) + 12 * ((100vw - 320px) / 1600));
+    }
+  
+  }
+  
+  
+  /* Scren with a width equal or bigger than 1920px  */
+  @media screen and (min-width: 1920px) {
+  
+    .fluid-font-big-title{
+      font-size: var(--max-big-title-size)
+    }
+  
+    .fluid-font-title{
+      font-size: var(--max-title-size);
+    }
+  
+    .fluid-font-subtitle{
+      font-size: var(--max-subtitle-size);
+    }
+  
+    .fluid-font-paragraph{
+      font-size: var(--max-paragraph-size);
+    }
+  
+    .fluid-font-medium-paragraph{
+      font-size: var(--max-medium-paragraph-size);
+    }
+  
+    .fluid-font-small-paragraph{
+      font-size: var(--max-small-paragraph-size);
+    }
+  
+    .fluid-font-modal-title {
+      font-size: var(--max-modal-title-size);
+    }
+  
+    .fluid-font-modal-text {
+      font-size: var(--max-modal-text-size);
+    }
+  
+  }

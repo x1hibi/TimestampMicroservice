@@ -1,0 +1,61 @@
+
+.home-title{
+    background: -webkit-linear-gradient(rgba(9,9,121,1),rgb(119, 119, 228));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--dark-blue);  
+    text-shadow: 0 0 10% #888888;
+    text-shadow: 3px 3px 20px #ffffffcb;
+}
+
+.blue-button{
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);
+    transition-duration: 0.25s;
+    border-radius: 50px;
+    color: white;
+    width: fit-content;
+    padding: 20px;
+    box-shadow: 1px 1px 5px rgb(15, 15, 89);
+    display: block;
+}
+
+.blue-button:hover{
+    transform: scale(1.1);
+}
+
+.blue{
+    color: blue;
+}
+
+.card-description{
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.form-input{
+    padding: 20px;
+    border-radius: 50px;
+    border: 3px solid blue;
+    box-shadow: 1px 1px 5px gray;
+    transition-duration: 0.5s;
+}
+
+.form-input:hover,.form-input:focus{
+    box-shadow: 1px 1px 10px darkblue;
+}
+
+.back-button{
+    position: absolute;
+    top:10px;
+    left: 20px;
+    color: blue;
+    font-size: xxx-large;
+    text-shadow: 1px 1px 3px gray;
+}
+
+.input-upload{
+    border: 3px solid blue;
+    border-radius: 50px;
+    padding: 2% 1%;
+}

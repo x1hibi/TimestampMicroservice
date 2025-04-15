@@ -1,32 +1,50 @@
 <!DOCTYPE html>
-
-<html>
-   <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
+<html lang="en">
+  <head>
+    <title>Timestamp Microservice</title>
+    <link rel="shortcut icon" href="images/x1hibi.ico" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
 
    <body>
-    <h1>Timestamp Microservice</h1>
-    <hr />
-    <div class="container">
-      <h2>Example Usage:</h2>
-      <ul>
-        <li><a href="timestamp/api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="timestamp/api/1451001600000">[project url]/api/1451001600000</a></li>
-      </ul>
-
-      <h2>Example Output:</h2>
-      <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
-      </p>
-    </div>
-    <div class="footer">
-      <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
-      </p>
-    </div>
+    <main class="padding-3vw">
+      <button class="back-button">
+        <a href="/">↩</a>
+      </button>
+      <h1 class="fluid-font-title padding-bottom-3vw home-title">Timestamp Microservice</h1>
+      <section class="card-description padding-bottom-3vw">
+        <p class="fluid-font-paragraph">Timestamp Microservice consists of obtaining the date either in UTC format or in milliseconds and returning both dates in a JSON object.</p>
+      </section><br>
+      <section class="card-description padding-3vw">
+        <h2 class="fluid-font-para padding-top-bottom-1vw home-title"><b>API sintax:</b></h2>
+        <p class="fluid-font-paragraph"><code>
+          [host]/timestamp/api/<span class="blue">date</span>?
+        </code></p>
+        <p class="fluid-font-paragraph"><span class="blue">date</span> can be in UTC formart or in miliseconds.</p>
+      </section><br>
+      <section class="card-description padding-3vw">
+        <h2 class="fluid-font-para padding-top-bottom-1vw home-title"><b>Example wit UTC date:</b></h2>
+        <p class="fluid-font-paragraph">Click in below link to convert UTC date:</p>
+        <p class="fluid-font-paragraph blue"><a href="timestamp/api/2015-12-25">host/timestamp/api/2015-12-25</a></p>
+        <h2 class="fluid-font-para padding-top-bottom-1vw home-title"><b>Example Output:</b></h2>
+        <p class="fluid-font-paragraph">
+          <code>{"unix":1451001600000,"utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+        </p><br>
+      </section><br>
+      <section class="card-description padding-3vw">
+        <h2 class="fluid-font-para padding-top-bottom-1vw home-title"><b>Example wit date in miliseconds:</b></h2>
+        <p class="fluid-font-paragraph">Click in below link to convert date in miliseconds:</p>
+        <p class="fluid-font-paragraph blue"><a href="timestamp/api/10000">host/timestamp/api/10000</a></p>
+        <h2 class="fluid-font-para padding-top-bottom-1vw home-title"><b>Example Output:</b></h2>
+        <p class="fluid-font-paragraph">
+          <code>{"unix":10000,"utc":"Thu, 01 Jan 1970 00:00:10 GMT"}</code>
+        </p>
+      </section><br>
+      <footer class="card-description padding-3vw">
+        <p class="fluid-font-paragraph center-text">Developed by <a class="blue" href="https://x1hibi.github.io/x1hibi/">x1hibi 🐦‍🔥</a></p>
+      </footer>
+    </main>
   </body>
 </html>

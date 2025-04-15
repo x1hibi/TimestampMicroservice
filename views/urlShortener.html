@@ -1,32 +1,45 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <title>URL Shortener Microservice | freeCodeCamp.org</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png"
-    />
-    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+    <title>URL Shortener Microservice</title>
+    <link rel="shortcut icon" href="images/x1hibi.ico" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
-    <h1>URL Shortener Microservice</h1>
-    <main>
-      <section>
-        <form action="url-shortener/api/shorturl" method="POST">
-          <fieldset>
-            <legend>URL Shortener</legend>
-            <label for="url_input">URL:</label>
-            <input id="url_input" type="text" name="url" placeholder="https://x1hibi.github.io/x1hibi/" />
-            <input type="submit" value="POST URL" />
-          </fieldset>
-        </form>
-      </section>
+    <button class="back-button">
+      <a href="/">↩</a>
+    </button>
+    <main class="padding-3vw">
+      <h1 class="fluid-font-title padding-bottom-3vw home-title">URL Shortener Microservice</h1>
+      <section class="card-description padding-bottom-3vw">
+        <p class="fluid-font-paragraph">URL Shortener Microservice save a URL in mongo database and return a id with location from original url to create a short URL.</p>
+      </section><br>
+      <form action="url-shortener/api/shorturl" method="POST" class="card-description flex-column-fixed">
+        <h2 class="fluid-font-paragraph home-title">Insert a URL</h2><br>
+        <section>
+          <label for="url_input" class="fluid-font-paragraph">URL:</label>
+          <input id="url_input" class="form-input fluid-font-paragraph" type="text" name="url" placeholder="https://x1hibi.github.io/x1hibi/" required>
+        </section><br>
+        <button class="blue-button fluid-font-paragraph margin-auto" type="submit" value="POST URL">Send url</button>
+      </form><br>
+      <section class="card-description padding-3vw">
+        <h2 class="fluid-font-paragraph padding-top-bottom-1vw home-title"><b>API sintax:</b></h2>
+        <p class="fluid-font-paragraph"><code>
+          [host]/api/shorturl/<span class="blue">short_url</span>?
+        </code></p>
+        <p class="fluid-font-paragraph"><span class="blue">short_url</span> is a Int that represent the id in database, when enter in browser this url you will be redirect to original URL</p>
+      </section><br>
+      <section class="card-description padding-bottom-3vw">
+        <h2 class="fluid-font-paragraph home-title">Example of usage:</h2><br>
+        <p class="fluid-font-paragraph blue"><a href="url-shortener/api/shorturl/0" target="_blank">[host]/url-shortener/api/shorturl/0</a></p>
+      </section><br>
+      <footer class="card-description padding-3vw">
+        <p class="fluid-font-paragraph center-text">Developed by <a class="blue" href="https://x1hibi.github.io/x1hibi/">x1hibi 🐦‍🔥</a></p>
+      </footer>
     </main>
-    <footer>
-      <p>By <a href="https://www.freecodecamp.org/">x1hibi</a></p>
-    </footer>
+
   </body>
 </html>

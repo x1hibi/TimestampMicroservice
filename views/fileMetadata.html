@@ -1,34 +1,40 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>File Metadata</title>
+    <link rel="shortcut icon" href="images/x1hibi.ico" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
 
-<html>
-   <head>
-      <title>File Metadata</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="/public/style.css" rel="stylesheet" type="text/css">
-   </head>
 
-   <body>
-      <div class="container">
-        <h1>API Project: File Metadata Microservice</h1>
-
-        <h2>Usage:</h2>
-        <p>
-          Please Upload a File ...
-        </p>
-        <div class="view">
-          <h3 id="output"></h3>
-          <form enctype="multipart/form-data" method="POST" action="/file-metadata/api/fileanalyse">
-            <input id="inputfield" type="file" name="upfile">
-            <input id="button" type="submit" value="Upload">
-          </form>
-        </div>
-      </div>
-      <div class="footer">
-        <p>
-          by 
-          <a href="http://www.freecodecamp.com">freeCodeCamp</a>
-        </p>
-      </div>
-   </body>
+  <body>
+    <main class="padding-3vw">
+      <button class="back-button">
+        <a href="/">↩</a>
+      </button>
+      <h1 class="fluid-font-title padding-bottom-3vw home-title">File Metadata Microservice</h1>
+      <section class="card-description padding-bottom-3vw">
+        <p class="fluid-font-paragraph">File Metadata Microservice consists in upload one file and return metadata from uploaded file as JSON.</p>
+      </section><br>
+      <form class="card-description flex-column-fixed" enctype="multipart/form-data" method="POST" action="/file-metadata/api/fileanalyse">
+        <h2 class="fluid-font-paragraph home-title">Upload file</h2><br>
+        <section>
+          <input class="fluid-font-paragraph input-upload" id="inputfield" type="file" name="upfile" required>
+        </section><br>
+        <button class="blue-button fluid-font-paragraph margin-auto"  id="button" type="submit" value="Upload">Upload file</button>
+      </form><br>
+      <section class="card-description padding-3vw">
+        <h2 class="fluid-font-para padding-top-bottom-1vw home-title"><b>API endpoint:</b></h2>
+        <p class="fluid-font-paragraph blue"><code>
+          POST [host]/file-metadata/api/fileanalyse
+        </code></p>
+        <p>Return a json with size, name and type of data of uploaded file.</p>
+      </section><br>
+      <footer class="card-description padding-3vw">
+        <p class="fluid-font-paragraph center-text">Developed by <a class="blue" href="https://x1hibi.github.io/x1hibi/">x1hibi 🐦‍🔥</a></p>
+      </footer>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,7 @@
+/*** In this project we use web-design approach ***/
+/*** Root Variables ***/
+/*** Styles ***/
+@import url('rootVariables.css');
+@import url('general.css');
+@import url('responsiveFonts.css'); 
+@import url('microservices.css'); 
