@@ -1,5 +1,13 @@
+require('dotenv').config();
 let express = require('express');
 let app = express();
+let mongoose = require('mongoose');
+const  bodyParser = require('body-parser');
+// Database conection
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Make a parser for body in post request
+app.use(bodyParser.urlencoded({ extended: false }));
 
 /**********************/
 /* MIDDLEWARE ROUTES */

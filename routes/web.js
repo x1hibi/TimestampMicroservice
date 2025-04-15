@@ -13,4 +13,8 @@ router.get("/timestamp-microservice", (request, response) => {
     response.sendFile(viewPath+'timestamp.html');
 });
 
+router.get("/url-shortener", (request, response) => {
+    response.sendFile(viewPath+'urlShortener.html');
+});
+
 module.exports = router
